@@ -281,19 +281,20 @@ section.projects .flex {
 .img-port {
     width: 360px;
     height: 460px;
+    margin-bottom: 50px;
     background-size: contain;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
+    background-color: #725AC1;
     border-radius: 40px;
     box-shadow: #0000002f 5px 5px 20px;
     position: relative;
-    background-color: #725AC1;
+    cursor: pointer;
+    /* background-position: 100% 0%; */
+    /* transition: 8s; */
 }
 
-.img-port:hover {
+/* .img-port:hover {
     background-position: 100% 100%;
-}
+} */
 
 .overlay {
     position: absolute;
@@ -316,6 +317,22 @@ section.projects .flex {
 .overlay:hover {
     opacity: 1;
 }
+
+.link-all-projects {
+    display: flex;
+    justify-content: center;
+}
+
+.link-all-projects a {
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: 500;
+ }
+
+.link-all-projects i {
+   margin-left: 10px;
+}
+
 
 /* Form style */
 
@@ -347,25 +364,25 @@ form textarea {
     max-height: 200px;
 }
 
-form .btn-submit {
-    margin-top: 20px;
+form > .btn-contact {
+    margin-top: 10px;
     text-align: center;
 }
 
-form .btn-submit input {
-    width: 120px;
-    background-color: #725AC1;
-    color: #000;
-    font-weight: 700;
-    cursor: pointer;
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+    outline: none;
+    box-shadow: 0 0 0 2px #725AC1;
     transition: .2s;
 }
 
-#btn-submit:hover {
-    
-    transition: .2s;
-    transform: scale(1.05);
+form > input:valid,
+textarea:valid {
+    box-shadow: 0 0 0 2px #98ff5ccd;
 }
+
 ::-webkit-input-placeholder {
     color: #000;
 }
