@@ -12,8 +12,34 @@
     font-family: 'Inter', sans-serif;
 }
 
+:root {
+    --background-light-theme: #fff;
+    --background-dark-theme: #242038;
+
+    --purple1: #242038;
+    --purple2: #725AC1;
+    --purple3: #8d86c9b4;
+    --purple4: #8D86C9;
+    --purple5: #CAC4CE;
+
+    --font-black: #000;
+    --font-white: #fff;
+    --font-puple1: #725ac1;
+    --font-puple2: #8D86C9;
+    
+    --icon: #8D86C9;
+
+    --button: #725AC1;
+
+    --shadow: #696969;
+    --purple-shadow: #CBC2E8;
+
+    --border: #00000086;
+
+}
+
 body {
-    background-color: #fff;
+    background-color: var(--background-light-theme);
     height: 100vh;
 }
 
@@ -39,7 +65,7 @@ section {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #725ac1;
+    background-color: var(--button);
     color: #fff;
     border: 0;
     border-radius: 15px;
@@ -47,7 +73,7 @@ section {
 }
 
 .btn-contact button:hover {
-    box-shadow: 0px 0px 8px #696969;
+    box-shadow: 0px 0px 8px var(--shadow);
     transition: .2s;
     transform: scale(1.05);
 }
@@ -57,7 +83,7 @@ section {
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: #8D86C9;
+    background-color: var(--icon);
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
@@ -79,12 +105,11 @@ h2 {
 }
 
 span{
-    color: #725ac1;
+    color: var(--font-puple1);
 }
 
 /* Header Styles */
 header {
-    background-color: #fff;
     margin-bottom: 40px;
     padding: 40px 4%;
 }
@@ -105,7 +130,7 @@ header nav li {
 }
 
 header a {
-    color: #000;
+    color: var(--font-black);
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -113,7 +138,7 @@ header a {
 }
 
 header a:hover {
-    color: #725AC1;
+    color: var(--font-puple1);
     transform: scale(1.05);
 }
 
@@ -125,11 +150,11 @@ header a:hover {
 }
 
 .text-home span {
-    color: #8D86C9;
+    color: var(--font-puple2);
 }
 
 .text-home > span {
-    background-color: #000;
+    background-color: var(--font-black);
 }
 
 .text-home #animation {
@@ -170,16 +195,11 @@ section.about > .interface {
     width: 300px;
     height: auto;
     border-radius: 20px;
-    border:solid rgba(0, 0, 0, 0.526);
+    border:solid var(--border);
 }
 
 .txt-about {
     margin: 0px 40px 40px 40px;
-}
-
-.txt-about h3{
-    font-size: 25pt;
-    text-align: left;
 }
 
 .txt-about p {
@@ -195,81 +215,52 @@ section.about > .interface {
     padding: 20px;
 }
 
-/* Skills style */
+/* Dev tools style */
 
-.skills .interface {
-    /* margin: 50px; */
-    padding: 40px 4%;
-    border-radius: 10px;
+.skills {
+    text-align: center;
 }
 
-.skills h3{
-    border-radius: 80px;
-    text-align: center;
-    font-size: 20pt;
-    font-weight: 800;
+.dev-tools {
     margin: 20px;
 }
 
-.skills h4 {
-    text-align: left;
-    margin-left: 30px;
-    align-items: center;
-}
-
-.skills-frontend {
-    background-color: #8D86C9;
-    border:solid rgba(0, 0, 0, 0.526);
-    border-radius: 30px;
-    width: 50%;
-    height: auto;
-    text-align: left;
-    margin: 10px;
-    position: relative;
-}
-
-.skills-backend {
-    background-color: #8D86C9;
-    border:solid rgba(0, 0, 0, 0.526);
-    border-radius: 30px;
-    width: 50%;
-    height: 100%;
-    text-align: left;
-    margin: 10px;
-    position: relative;
-}
-
-.tech-desc {
-    color: #242038;
-    text-align: justify;
-    font-size: 10pt;
-    font-weight: 700;
-    background-color: #F7ECE1;
-    margin: 25px 25px 25px 20px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: #35246c66 10px 10px 10px;
+.dev-tools h3 {
+    font-size: 20pt;
+    margin: 20px;
 }
 
 .skills-icon {
-    width: 80px;
-    height: 80px;
-    margin: 10px 0px 10px 20px 
-}
-
-.skills-frontend:hover {
-    box-shadow: #00000077 5px 5px 20px;
-    transition: .5s;
-}
-
-.skills-backend:hover {
-    box-shadow: #00000077 5px 5px 20px;
-    transition: .5s;
+    transition: .2s;
+    transform: scale(1);
+    margin: 10px;
 }
 
 .skills-icon:hover {
-    transition: .2s;
     transform: scale(1.05);
+}
+
+.txt-dev-tools p {
+    color: var(--font-black);
+    font: 10pt;
+    font-weight: 500;
+    text-align: justify;
+    margin-top: 30px;
+    max-width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#icon-html:hover ~ .txt-dev-tools p#html-desc,
+#icon-css:hover ~ .txt-dev-tools p#css-desc,
+#icon-js:hover ~ .txt-dev-tools p#javascript-desc,
+#icon-python:hover ~ .txt-dev-tools p#python-desc,
+#icon-csharp:hover ~ .txt-dev-tools p#csharp-desc,
+#icon-sql:hover ~ .txt-dev-tools p#sql-desc,
+#icon-git:hover ~ .txt-dev-tools p#git-desc {
+    display: block;
+    transition: 20s;
 }
 
 /* My projects style */
@@ -283,18 +274,11 @@ section.projects .flex {
     height: 460px;
     margin-bottom: 50px;
     background-size: contain;
-    background-color: #725AC1;
     border-radius: 40px;
     box-shadow: #0000002f 5px 5px 20px;
     position: relative;
     cursor: pointer;
-    /* background-position: 100% 0%; */
-    /* transition: 8s; */
 }
-
-/* .img-port:hover {
-    background-position: 100% 100%;
-} */
 
 .overlay {
     position: absolute;
@@ -349,12 +333,12 @@ form {
 form input,
 form textarea {
     width: 100%;
-    background-color: #8d86c9b4;
+    background-color: var(--purple3);
     border: 0;
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
-    color: #000;
+    color: var(--font-black);
     font-weight: 500;
     font-size: 18px;
 }
@@ -374,7 +358,7 @@ input:hover,
 textarea:focus,
 textarea:hover {
     outline: none;
-    box-shadow: 0 0 0 2px #725AC1;
+    box-shadow: 0 0 0 2px var(--purple2);
     transition: .2s;
 }
 
@@ -384,7 +368,7 @@ textarea:valid {
 }
 
 ::-webkit-input-placeholder {
-    color: #000;
+    color: var(--font-black);
 }
 
 /* Footer style */
@@ -392,7 +376,7 @@ textarea:valid {
 footer {
     margin-top: 50px;
     padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #725ac18d
+    box-shadow: 0 0 40px 10px var(--purple-shadow)
 }
 
 footer .flex {
@@ -404,20 +388,20 @@ footer .line-footer {
 }
 
 footer .line-footer p i{
-    color: #725ac1;
+    color: var(--purple2);
     font-size: 15pt;
     text-decoration: none;
 }
 
 footer .line-footer p a{
     text-decoration: none;
-    color: #000;
+    color: var(--font-black);
     font-weight: 500;
     margin-left: 5px;
 }
 
 .border {
     border-top: solid;
-    color: #725AC1;
+    color: var(--purple2);
 }
 
